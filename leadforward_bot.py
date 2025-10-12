@@ -5,7 +5,7 @@ from telegram.ext import Application, CommandHandler, CallbackQueryHandler, Cont
 TOKEN = "7964725870:AAEVll5kzeWiu5IOb0Z58W4UbKq8blug5FU"
 
 # --- 🌐 COMPANY PROFILE LINK ---
-CANVA_PROFILE_LINK = "https://www.canva.com/design/DAG0peX2Eng/xjBQx1rEuHVMUU3ypiscWA/edit?utm_content=DAG0peX2Eng&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton"  # replace with your real link
+CANVA_PROFILE_LINK = "https://www.canva.com/design/DAGy386fHMM/kqcp5Ph9XErZ4QQ4Obm9aw/edit?utm_content=DAGy386fHMM&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton"  # replace with your real link
 
 # --- 🧭 MAIN MENU BUTTONS ---
 def main_menu():

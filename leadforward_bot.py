@@ -3,6 +3,20 @@ from telegram.ext import Application, CommandHandler, CallbackQueryHandler, Cont
 
 # --- 🔑 BOT TOKEN ---
 TOKEN = "7964725870:AAEVll5kzeWiu5IOb0Z58W4UbKq8blug5FU"
+async def handle_messages(update: Update, context: ContextTypes.DEFAULT_TYPE):
+    user = update.message.from_user
+    text = update.message.text
+
+    print(f"{user.first_name} said: {text}")  # log every message
+
+    # Example: reply when boss posts something
+    if user.username == "BossUsername":  # replace with your boss’s @username
+        await update.message.reply_text("✅ Message received from the boss!")
+
+app = Application.builder().token(TOKEN).build()
+app.add_handler(MessageHandler(filters.TEXT, handle_messages))
+
+app.run_polling()
 
 # --- 🌐 COMPANY PROFILE LINK ---
 CANVA_PROFILE_LINK = "https://www.canva.com/design/DAGy386fHMM/kqcp5Ph9XErZ4QQ4Obm9aw/edit?utm_content=DAGy386fHMM&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton"  # replace with your real link
